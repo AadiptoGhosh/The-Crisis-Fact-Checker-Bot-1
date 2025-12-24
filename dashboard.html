@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Official Disaster Response</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <header>
+        <div class="container">
+            <h1>Rescue Command Center</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="community.html">Community Feed</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="login.html" id="logout-button">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <label for="severity-filter">Severity</label>
+                <select id="severity-filter">
+                    <option>All</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="location-filter">Location</label>
+                <input type="text" id="location-filter" placeholder="City or Region">
+            </div>
+             <div class="view-toggle">
+                <label for="view-switch">Toggle View:</label>
+                <select id="view-switch">
+                    <option value="official">Official Rescue Team</option>
+                    <option value="volunteer">Volunteer View</option>
+                </select>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <h2>Verified High-Priority Incidents</h2>
+            <div id="dashboard-feed" class="feed">
+                <!-- High-priority verified items will be dynamically loaded here -->
+                 <div class="card">
+                    <div class="card-header">
+                        <span class="status-badge status-verified">Verified</span>
+                        <div class="trust-score">
+                            <span>Trust Score: 98%</span>
+                            <meter value="98" min="0" max="100"></meter>
+                        </div>
+                    </div>
+                    <p>Building collapse reported at 123 Main St. Multiple injuries confirmed. Emergency services dispatched.</p>
+                    <div class="card-footer">
+                        <div class="ai-insight">
+                            <button class="insight-toggle">AI Insight</button>
+                            <div class="insight-content">
+                                <p>Verified against fire department and police dispatch logs.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="source-map">Source Map</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

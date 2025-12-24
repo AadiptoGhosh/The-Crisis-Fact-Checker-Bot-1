@@ -1,0 +1,31 @@
+{
+  "verifiedNews": [
+    {
+      "id": "doc-001",
+      "source": "National Weather Service",
+      "headline": "Severe Thunderstorm Warning issued for Central County until 8:00 PM.",
+      "region": "Central County",
+      "type": "Weather",
+      "keywords": ["thunderstorm", "warning", "severe weather"],
+      "timestamp": "2025-12-25T18:30:00Z"
+    },
+    {
+      "id": "doc-002",
+      "source": "State Department of Transportation",
+      "headline": "Road closure on Highway 101 North due to multi-car pile-up.",
+      "region": "Coastal Region",
+      "type": "Traffic",
+      "keywords": ["road closure", "accident", "Highway 101"],
+      "timestamp": "2025-12-25T19:00:00Z"
+    },
+    {
+       "id": "doc-003",
+      "source": "Anytown Fire Department",
+      "headline": "Structure fire reported at 123 Elm Street. Avoid the area.",
+      "region": "Anytown",
+      "type": "Fire",
+      "keywords": ["fire", "structure fire", "Elm Street"],
+      "timestamp": "2025-12-25T19:15:00Z"
+    }
+  ]
+}

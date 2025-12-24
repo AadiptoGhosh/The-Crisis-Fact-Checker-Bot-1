@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Feed - Official Disaster Response</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Official Disaster Response</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="community.html" class="active">Community Feed</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="submission-form">
+            <h2>Report a Distress Call</h2>
+            <form id="report-form">
+                <textarea id="post-content" placeholder="Describe the emergency..."></textarea>
+                <button type="submit" class="btn btn-primary">Submit for Verification</button>
+            </form>
+        </div>
+
+        <div id="community-feed" class="feed">
+            <!-- Feed cards will be dynamically inserted here -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="status-badge status-verified">Verified</span>
+                    <div class="trust-score">
+                        <span>Trust Score: 95%</span>
+                        <meter value="95" min="0" max="100"></meter>
+                    </div>
+                </div>
+                <p>Flooding in the downtown area near the central library. Water is rising fast.</p>
+                <div class="card-footer">
+                    <div class="ai-insight">
+                        <button class="insight-toggle">AI Insight</button>
+                        <div class="insight-content">
+                            <p>This post was cross-referenced with multiple official sources, including the National Weather Service and local news outlets, confirming the flood reports.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="source-map">Source Map</a>
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-header">
+                    <span class="status-badge status-scam">Potential Scam</span>
+                    <div class="trust-score">
+                        <span>Trust Score: 15%</span>
+                        <meter value="15" min="0" max="100"></meter>
+                    </div>
+                </div>
+                <p>URGENT!! Free supplies available if you call this number and provide your credit card for shipping!</p>
+                <div class="card-footer">
+                     <div class="ai-insight">
+                        <button class="insight-toggle">AI Insight</button>
+                        <div class="insight-content">
+                            <p>Keywords like "URGENT!!", "Free", and requests for financial information match patterns of known scam activities. No official sources corroborate this claim.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="source-map">Source Map</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2025 Official Disaster Response. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
